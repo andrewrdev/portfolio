@@ -2,23 +2,361 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/boot.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Portfolio</title>
+    <meta charset="utf-8">
+    <title>Portfólio | Andrew Rodrigues | Desenvolvedor de Software</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="Andrew Rodrigues | Desenvolvedor de Software" name="description">    
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">   
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">    
+    <link href="css/bootstrap.min.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="brand">
-                    <h1>LOGO</h1>
+    <div class="container-xxl bg-white p-0">
+        
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Carregando...</span>
+            </div>
+        </div>
+        
+        <div class="container-xxl position-relative p-0" id="inicio">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0" style="font-size: 2rem;"></i>andrewrdev</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="#inicio" class="nav-item nav-link">Inicio</a>
+                        <a href="#habilidades" class="nav-item nav-link">Habilidades</a>
+                        <a href="#projetos" class="nav-item nav-link">Projetos</a>
+                        <a href="#contato" class="nav-item nav-link">Contato</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-xxl py-5 bg-primary banner-header mb-5">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-2 animated zoomIn">Andrew Rodrigues</h1>
+                            <h5 class="text-white mb-5 animated zoomIn">Desenvolvedor de Software</h5>
+                            <p class="text-white pb-3 animated zoomIn">Programador Web com sólidos conhecimentos,
+                                especializado em desenvolver aplicações web completas, desde a interface do usuário até
+                                a lógica de back-end. Minha expertise inclui HTML, CSS, JavaScript, PHP, Java, e
+                                gerenciamento de bancos de dados como MySQL.</p>
+                            <a href="#projetos"
+                                class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Projetos</a>
+                            <a href="https://github.com/andrewrdev"
+                                class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft" target="_blank">GitHub</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid" src="img/banner.png" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+        
+        <div class="modal fade" id="searchModal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content" style="background: rgba(29, 29, 39, 0.7);">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center">
+                        <div class="input-group" style="max-width: 600px;">
+                            <input type="text" class="form-control bg-transparent border-light p-3"
+                                placeholder="Type search keyword">
+                            <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container-xxl py-5" id="habilidades">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="position-relative d-inline text-primary ps-4">Habilidades</h6>
+                    <h2 class="mt-2">Stack de Desenvolvimento</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-laptop-code fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Front-End</h5>
+                            <p>Angular, Bootstrap, CSS, HTML, JavaScript, jQuery, TypeScript</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-code fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Back-End</h5>
+                            <p>Java, JSP, JPA (Hibernate), Laravel, PHP, Spring Boot, Spring MVC, Thymeleaf</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-cubes fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">Banco de Dados</h5>
+                            <p>MySQL, PostgreSQL, SQL, SQLite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-xxl py-5" id="projetos">
+            <div class="container px-lg-5">
+                <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="position-relative d-inline text-primary ps-4">Projetos</h6>
+                    <h2 class="mt-2">Recentes</h2>
+                </div>
+                <div class="row g-4 portfolio-container">
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-8.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://github.com/andrewrdev/phpay-api"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Back-End, API REST,
+                                        PHP</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://github.com/andrewrdev/phpay-api">PHPay API</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-9.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://github.com/andrewrdev/springpay-api"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Back-End, API REST,
+                                        Java, Spring Boot</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://github.com/andrewrdev/phpay-api">SpringPay API</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-10.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://github.com/andrewrdev/springpay-api"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Front-End, HTML, CSS, Javascript</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://github.com/andrewrdev/phpay-api">Portal de Notícias</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://andrewrdev.github.io/projeto-finans/"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Front-End</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://andrewrdev.github.io/projeto-finans/">Finans</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-7.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://andrewrdev.github.io/projeto-spotify/"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Front-End</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://andrewrdev.github.io/projeto-spotify/">Spotify</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.1s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://andrewrdev.github.io/projeto-tecblog/"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Front-End</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://andrewrdev.github.io/projeto-tecblog/">TecBlog</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.3s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://github.com/andrewrdev/projeto-twitter-clone"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Back-End, PHP</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://github.com/andrewrdev/projeto-twitter-clone">Twitter Clone</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.6s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://andrewrdev.github.io/projeto-noticias-cidade/"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Front-End</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://andrewrdev.github.io/projeto-noticias-cidade/">Notícias Cidade</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow zoomIn" data-wow-delay="0.1s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://andrewrdev.github.io/projeto-anna-bella/"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Front-End</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://andrewrdev.github.io/projeto-anna-bella/">Anna Bella Modelo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow zoomIn" data-wow-delay="0.3s">
+                        <div class="position-relative rounded overflow-hidden">
+                            <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <a class="btn btn-light" href="https://andrewrdev.github.io/projeto-museu-nacional/"
+                                    data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-primary"></i></a>
+                                <div class="mt-auto">
+                                    <small class="text-white"><i class="fa fa-folder me-2"></i>Front-End</small>
+                                    <a class="h5 d-block text-white mt-1 mb-0"
+                                        href="https://andrewrdev.github.io/projeto-museu-nacional/">Museu Nacional</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-xxl py-5" id="contato">
+            <div class="container px-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="section-title position-relative text-center mb-5 pb-2 wow fadeInUp"
+                            data-wow-delay="0.1s">
+                            <h6 class="position-relative d-inline text-primary ps-4">Contato</h6>
+                            <h2 class="mt-2">Entre em Contato</h2>
+                        </div>
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <form action="#">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Nome</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Your Email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Assunto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here"
+                                                id="message" style="height: 150px"></textarea>
+                                            <label for="message">Mensagem</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <span id="yearNow"></span> &nbsp;<a class="border-bottom" href="index.html">Andrew
+                                Rodrigues</a> - Desenvolvedor de Software
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#inicio">Inicio</a>
+                                <a href="#habilidades">Habilidades</a>
+                                <a href="#projetos">Projetos</a>
+                                <a href="#contato">Contato</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <a href="#inicio" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i
+                class="bi bi-arrow-up"></i></a>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>

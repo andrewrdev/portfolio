@@ -180,13 +180,7 @@ h6,
 
 
 /*** banner Header ***/
-.banner-header {
-    background:
-        url(../img/bg-dot.png),
-        url(../img/bg-dot.png),
-        url(),
-        url(),
-        url(../img/bg-bottom-banner.png);
+.banner-header { 
     background-position:
         10px 10px,
         bottom 190px right 10px,
@@ -361,8 +355,7 @@ h6,
 
 
 /*** Footer ***/
-.footer {
-    background: url(../img/footer.png) center center no-repeat;
+.footer {    
     background-size: contain;
 }
 

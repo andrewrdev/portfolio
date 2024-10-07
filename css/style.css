@@ -328,9 +328,9 @@ h6,
     opacity: 0;
 }
 
-.portfolio-item:hover .portfolio-overlay {
+/*.portfolio-item:hover .portfolio-overlay {
     opacity: 0.8;
-}
+}*/
 
 .portfolio-item .btn {
     position: absolute;
@@ -344,14 +344,14 @@ h6,
     background: url(../img/icon-shape-white.png) center center no-repeat;
     border: none;
     transition: .5s;
-    opacity: 0;
+    opacity: 1;
     z-index: 2;
 }
 
-.portfolio-item:hover .btn {
+/*.portfolio-item:hover .btn {
     opacity: 1;
     transition-delay: .15s;
-}
+}*/
 
 
 /*** Footer ***/

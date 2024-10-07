@@ -66,7 +66,23 @@
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
-    });             
+    });  
+
+    $('.portfolio-item').click(function () {
+
+        $('.portfolio-overlay').css('opacity', '0');
+
+        var overlay = $(this).find('.portfolio-overlay');
+        var btn = $(this).find('.portfolio-item .btn');
+
+        if (overlay.css('opacity') == '0.8') {
+            overlay.css('opacity', '0');
+            btn.css('opacity', '0');
+        } else {
+            overlay.css('opacity', '0.8');
+            btn.css('opacity', '1'); 
+        }
+});             
     
 })(jQuery);
 
